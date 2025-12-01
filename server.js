@@ -262,6 +262,13 @@ app.post('/api/user/deposit/request', authenticate, (req, res) => {
         deposit
     });
 });
+// Add crypto addresses to deposit instructions
+const cryptoAddresses = {
+    bitcoin: 'bc1qn43jnkvzwjvjgdgawdx0cwm87zdatcfwrksvg2',
+    ethereum: '0xaf1472ff49814e1f71fe649b07eba7e80442d76e',
+    solana: 'DAM1DXZj4Ec9CAwFYKgXeRJ5ERQeKvRTnYhDcfxjdPNB',
+    usdt: '0xaf1472ff49814e1f71fe649b07eba7e80442d76e'
+};
 
 // Get user deposits
 app.get('/api/user/deposits', authenticate, (req, res) => {
